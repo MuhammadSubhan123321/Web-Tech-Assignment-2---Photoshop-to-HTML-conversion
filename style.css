@@ -1,0 +1,133 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #fff; color: #333; line-height: 1.6; }
+
+/* Reusable Classes */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.text-red { color: #ff4d4d; }
+.btn { padding: 12px 30px; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 13px; border-radius: 4px; display: inline-block; transition: 0.3s; }
+.btn-red { background-color: #ff4d4d; color: white; border: none; }
+.btn-transparent { border: 2px solid white; color: white; }
+.btn-transparent-dark { border: 2px solid #fff; color: #fff; margin-top: 20px; }
+.btn:hover { opacity: 0.8; }
+.img-responsive { width: 100%; height: auto; border-radius: 4px; }
+
+/* 1. Top Section */
+.hero {
+    background-image: url('images/office-meeting.avif'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 85vh; 
+    position: relative; 
+    color: white;
+}
+.overlay { background: rgba(0, 0, 0, 0.6); height: 100%; width: 100%; display: flex; flex-direction: column; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; }
+.logo { font-size: 24px; font-weight: bold; text-transform: uppercase; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: white; font-size: 13px; text-transform: uppercase; }
+.hero-content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-bottom: 100px; }
+.hero-content h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.2; }
+.hero-buttons { margin-top: 20px; }
+.hero-buttons .btn { margin: 0 10px; }
+
+/* 2. Info Cards */
+.info-cards-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: -80px; 
+    position: relative; 
+    z-index: 10; 
+    padding: 0 50px; 
+}
+.card { flex: 1; max-width: 350px; padding: 40px; color: white; border-radius: 4px; /* rounded corners with gaps */ }
+.card i { font-size: 28px; margin-bottom: 20px; }
+.card h3 { margin-bottom: 15px; text-transform: uppercase; font-size: 16px; }
+.card-red { background-color: #ff4d4d; }
+.card-dark { background-color: #1a252f; }
+
+/* 3. Services Section */
+.services-section { padding: 80px 50px; text-align: center; }
+.center-header h2 { font-size: 32px; margin-bottom: 10px; }
+.center-header p { color: #888; margin-bottom: 50px; }
+.services-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+.service-item { flex-basis: 30%; min-width: 250px; padding: 20px; }
+.icon-box { font-size: 36px; color: #333; margin-bottom: 15px; transition: 0.3s; }
+.service-item:hover .icon-box { color: #ff4d4d; transform: translateY(-5px); }
+.service-item h4 { text-transform: uppercase; margin-bottom: 10px; }
+
+/* 4. Dark Section (Business Plans) */
+.dark-section { background-color: #1a252f; color: white; padding: 80px 0; }
+.split-layout { display: flex; align-items: center; gap: 50px; }
+.text-content { flex: 1; }
+.image-content { flex: 1; position: relative; display: flex; justify-content: center; }
+
+/* office image */
+.image-content img { 
+    max-width: 70%; 
+    display: block; 
+}
+.text-content h2 { font-size: 32px; margin-bottom: 20px; }
+.red-box { position: absolute; top: 20px; right: 40px; width: 100px; height: 100%; background-color: #ff4d4d; z-index: -1; display: none; /* Hidden red box because resize makes it look weird, safer to hide for now */ }
+
+/* 5. Features Split */
+.features-split { padding: 80px 0; }
+.feature-list { flex: 1; }
+.feature-desc { flex: 1; }
+.feature-item { margin-bottom: 30px; }
+.feature-item h4 { text-transform: uppercase; margin-bottom: 5px; font-weight: bold; }
+.feature-desc h3 { font-size: 28px; margin-bottom: 20px; }
+
+/* 6. Portfolio Grid */
+.portfolio-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    padding: 20px 0;
+    justify-content: center;
+}
+.portfolio-item { 
+    width: calc(25% - 15px); 
+    height: 250px; 
+    overflow: hidden; 
+}
+.portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+.portfolio-item:hover img { transform: scale(1.1); }
+
+/* 7. Trusted & 8. Logos & 9. Handcrafted */
+.trusted-section, .handcrafted-section { padding: 80px 0; background-color: #f9f9f9; }
+.read-more-link { color: #333; font-weight: bold; text-decoration: none; border-bottom: 2px solid #333; margin-top: 20px; display: inline-block; }
+.logos-section { background-color: #1a252f; color: white; padding: 60px 0; }
+.logos-grid { display: flex; gap: 30px; color: #555; } 
+.logos-text { text-align: right; }
+.icon-features { display: flex; gap: 30px; margin-top: 30px; }
+
+/* 10. Contact Section */
+.contact-section { padding: 80px 0; border-top: 1px solid #eee; }
+.contact-form { flex: 1; background: #fff; padding: 30px; border: 1px solid #ddd; }
+.form-row { display: flex; gap: 20px; margin-bottom: 20px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.contact-form textarea { margin-bottom: 20px; }
+.btn-block { width: 100%; display: block; text-align: center; }
+
+/* 11. Footer */
+footer { background-color: #1a252f; color: #888; padding: 50px 0; font-size: 14px; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; }
+.footer-logo h3 { color: white; margin-bottom: 10px; }
+.footer-links a { color: #888; margin: 0 10px; text-decoration: none; }
+.newsletter input { padding: 8px; border: none; }
+.newsletter button { padding: 8px 15px; border: none; background: #ff4d4d; color: white; cursor: pointer; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links { display: none; } 
+    .info-cards-container { flex-direction: column; margin-top: 0; padding: 20px; }
+    .card { max-width: 100%; margin-bottom: 20px; }
+    .split-layout { flex-direction: column; text-align: center; }
+    .logos-text { text-align: center; margin-top: 20px; }
+    .portfolio-item { width: calc(50% - 15px); } /* 2 items per row on mobile */
+    .form-row { flex-direction: column; }
+    .footer-content { flex-direction: column; gap: 30px; text-align: center; }
+    .image-content img { max-width: 100%; } /* Full width on mobile is okay */
+}
