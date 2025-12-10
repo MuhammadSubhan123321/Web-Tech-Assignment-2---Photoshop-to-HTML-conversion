@@ -42,7 +42,7 @@ style.css
 
 images/ (Folder containing bg.jpg, portfolio1.jpg, etc.)
 
-Images: The CSS looks for specific file names like office-meeting.avif and bg.jpg inside the images folder.
+**Images:** The CSS looks for specific file names like office-meeting.avif and bg.jpg inside the images folder.
 
-👨‍💻 **Developer*
+👨‍💻 **Developer**
 Muhammad Subhan – Full-Stack Developer (in progress)
